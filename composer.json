@@ -1,0 +1,24 @@
+{
+    "name": "jcrodriguezt/laravel-blade-helpers",
+    "description": "Some blade directives not part of Laravel core package",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jcrodriguezt\\LaravelBladeHelpers\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julio Rodriguez",
+            "email": "jcrodsolutions@gmail.com"
+        }
+    ],
+    "require": {},
+	"extra": {
+        "laravel": {
+            "providers": [
+                "Jcrodriguezt\\LaravelBladeHelpers\\BladeHelpersServiceProvider"
+            ]
+        }
+    }
+}
