@@ -1,6 +1,6 @@
 {
     "name": "jcrodriguezt/laravel-blade-helpers",
-    "description": "Some blade directives not part of Laravel core package",
+    "description": "This package implements some blade directives not part of Laravel core package",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -13,7 +13,10 @@
             "email": "jcrodsolutions@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+		"php": "~7.3|~8.0",
+		"illuminate/support": "~7.0|~8.0|~9.0"
+	},
 	"extra": {
         "laravel": {
             "providers": [
