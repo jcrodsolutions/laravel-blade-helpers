@@ -45,16 +45,20 @@ This is an example of a basic configuration file. Note the css/js/img prefix.
 return [
     'csspath' => 'css/',
     'css' => [
-        'bs5' => env('CSS_BOOTSTRAP', 'bootstrap.min.css'),
+        'bs5' => [ 'src' => env('CSS_BOOTSTRAP', 'bootstrap.min.css') ],
     ],
     'jspath' => 'js/',
     'js' => [
-        'bs5' => 'bootstrap.bundle.min.js',
+        'bs5' => [ 'src' => 'bootstrap.bundle.min.js' ],
+        'jquery' => [ 
+            'src' => 'https://csn.example.com/jquery/3.6.1', 
+            'params' => 'integrity="sha512-aVKKRRi/Q/YVfls...dlfjd==" crossorigin="anonymous" referrerpolicy="no-referrer"' 
+        ],
     ],
     'imgpath' => 'images/',
     'img' => [
-        'logo' => env('APP_LOGO'),
-        'otherlogo' => 'otherlogo.png',
+        'logo' => [ 'src' => env('APP_LOGO') ],
+        'otherlogo' => [ 'src' => 'otherlogo.png', 'params' => 'class="w-100"' ],
     ],
 ```
 
