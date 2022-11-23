@@ -37,7 +37,8 @@ class BladeHelpersServiceProvider extends ServiceProvider {
                 return "<!-- No pude cargar el css: {$css} -->";
             }
 
-            return "<link rel='stylesheet' href='" . $this->loadAsset($css, 'css') . "' alt='{$css}'/>";
+            $params = isset($file['params']) ? $file['params'] : "";
+            return "<link rel='stylesheet' href='" . $this->loadAsset($css, 'css')['src'] . "' alt='{$css}'  {$params}/>";
         });
 
         Blade::directive('loadjs', function (string $js) {
@@ -48,7 +49,8 @@ class BladeHelpersServiceProvider extends ServiceProvider {
                 return "<!-- No pude cargar el js: {$js} -->";
             }
 
-            return "<script src='" . $this->loadAsset($js, 'js') . "'></script>";
+            $params = isset($file['params']) ? $file['params'] : "";
+            return "<script src='" . $this->loadAsset($js, 'js')['src'] . "' {$params}></script>";
         });
 
         Blade::directive('loadimg', function (string $img) {
@@ -59,22 +61,32 @@ class BladeHelpersServiceProvider extends ServiceProvider {
                 return "<!-- No pude cargar el img: {$img} -->";
             }
 
-            return "<img src='" . $this->loadAsset($img, 'img') . "' />";
+            $params = isset($file['params']) ? $file['params'] : "";
+            return "<img src='" . $file['src'] . "' {$params}/>";
         });
     }
 
     private function loadAsset(string $asset, string $type) {
         $return = false;
 
-        if (!config('blade-helpers.' . $type . '.' . $asset)) {
+        $path = config('blade-helpers.' . $type . 'path');
+        $arr = config('blade-helpers.' . $type . '.' . $asset);
+
+        if (!$arr || !isset($arr['src']) || $arr['src']=='' || $arr['src'] === null) {
             return false;
         }
 
-        $file = config('blade-helpers.' . $type . 'path') . config('blade-helpers.' . $type . '.' . $asset);
+        if (substr($arr['src'], 0, 4) == 'http') {
+            return $arr;
+        }
+
+        $file = $path . $arr['src'];
 
         if (file_exists($file)) {
             $file .= "?v=" . filemtime($file);
-            $return = config('app.url') . '/' . $file;
+            $arr['src'] = config('app.url') . '/' . $file;
+//            $return = config('app.url') . '/' . $file;
+            return $arr;
         }
         return $return;
     }

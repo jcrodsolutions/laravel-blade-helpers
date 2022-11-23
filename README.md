@@ -1,4 +1,5 @@
 # laravel-blade-helpers
+[![PHP Version](https://img.shields.io/packagist/php-v/jcrodriguezt/laravel-blade-helpers.svg)](https://packagist.org/packages/jcrodriguezt/laravel-blade-helpers)
 [![Packagist Version](https://img.shields.io/packagist/v/jcrodriguezt/laravel-blade-helpers.svg)](https://packagist.org/packages/jcrodriguezt/laravel-blade-helpers)
 [![Packagist](https://img.shields.io/packagist/dt/jcrodriguezt/laravel-blade-helpers.svg)](https://packagist.org/packages/jcrodriguezt/laravel-blade-helpers)
 [![Github](https://img.shields.io/github/license/jcrodriguezt/laravel-blade-helpers.svg)](https://packagist.org/packages/jcrodriguezt/laravel-blade-helpers)
