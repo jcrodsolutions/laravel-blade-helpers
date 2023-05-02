@@ -1,10 +1,10 @@
 {
-    "name": "jcrodriguezt/laravel-blade-helpers",
+    "name": "jcrodsolutions/laravel-blade-helpers",
     "description": "This package implements some blade directives not part of Laravel core package",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Jcrodriguezt\\LaravelBladeHelpers\\": "src/"
+            "Jcrodsolutions\\LaravelBladeHelpers\\": "src/"
         }
     },
     "authors": [
@@ -20,7 +20,7 @@
 	"extra": {
         "laravel": {
             "providers": [
-                "Jcrodriguezt\\LaravelBladeHelpers\\BladeHelpersServiceProvider"
+                "Jcrodsolutions\\LaravelBladeHelpers\\BladeHelpersServiceProvider"
             ]
         }
     }

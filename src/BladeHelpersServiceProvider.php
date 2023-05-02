@@ -1,6 +1,6 @@
 <?php
 
-namespace Jcrodriguezt\LaravelBladeHelpers;
+namespace Jcrodsolutions\LaravelBladeHelpers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
