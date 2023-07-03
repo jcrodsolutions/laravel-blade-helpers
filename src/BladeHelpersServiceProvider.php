@@ -4,6 +4,7 @@ namespace Jcrodsolutions\LaravelBladeHelpers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\Ig5;
 
 class BladeHelpersServiceProvider extends ServiceProvider {
 
@@ -24,6 +25,12 @@ class BladeHelpersServiceProvider extends ServiceProvider {
     public function boot() {
         $this->publishes([
             __DIR__ . '/../config/blade-helpers.php' => config_path(path: 'blade-helpers.php'),
+        ]);
+
+//        dd(__DIR__.'\\resources\\views');
+        $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
+        $this->loadViewComponentsAs('lbh', [
+            Ig5::class,
         ]);
 
         /*
@@ -52,7 +59,7 @@ class BladeHelpersServiceProvider extends ServiceProvider {
             $params = isset($file['params']) ? $file['params'] : "";
             return "<script src='" . $this->loadAsset($js, 'js')['src'] . "' {$params}></script>";
         });
-
+                
         Blade::directive('loadimg', function (string $img) {
             $img = str_replace(['"', "'"], "", $img);
 
@@ -72,7 +79,7 @@ class BladeHelpersServiceProvider extends ServiceProvider {
         $path = config('blade-helpers.' . $type . 'path');
         $arr = config('blade-helpers.' . $type . '.' . $asset);
 
-        if (!$arr || !isset($arr['src']) || $arr['src']=='' || $arr['src'] === null) {
+        if (!$arr || !isset($arr['src']) || $arr['src'] == '' || $arr['src'] === null) {
             return false;
         }
 
@@ -90,5 +97,4 @@ class BladeHelpersServiceProvider extends ServiceProvider {
         }
         return $return;
     }
-
 }
