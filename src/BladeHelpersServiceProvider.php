@@ -4,7 +4,11 @@ namespace Jcrodsolutions\LaravelBladeHelpers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\Ig5;
+use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\{
+    Ig5,
+    PbSeccionTextoBlockquote,
+    PbTituloRow,
+};
 
 class BladeHelpersServiceProvider extends ServiceProvider {
 
@@ -31,7 +35,10 @@ class BladeHelpersServiceProvider extends ServiceProvider {
         $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
         $this->loadViewComponentsAs('lbh', [
             Ig5::class,
+            PbSeccionTextoBlockquote::class,
+            PbTituloRow::class,
         ]);
+//        $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
 
         /*
          * Esto es para poder usar en blade @loadcss('bs5') por ejemplo para cargar bootstrap
