@@ -14,7 +14,7 @@
     <div class="col-{{ $col2 }}">
         <table @class([$clasestabla])>
             <tr>
-                <th>TITLE</th>
+                <th></th>
                 <th class='text-center'>TITLE</th>
                 <th class='text-center'>TITLE</th>
             </tr>
