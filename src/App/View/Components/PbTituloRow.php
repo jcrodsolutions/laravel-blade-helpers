@@ -12,7 +12,6 @@ class PbTituloRow extends Component {
      * Create a new component instance.
      */
     public function __construct(
-            public string $texto,
             public string $titulo,
             public array|null $tituloRowClasses = null,
     ) {

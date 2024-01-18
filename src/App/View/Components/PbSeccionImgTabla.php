@@ -1,14 +1,14 @@
 <?php
 
-namespace App\View\Components\PageBuilder;
+namespace Jcrodsolutions\LaravelBladeHelpers\App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\Component;
 
-class SeccionImgTabla extends Component {
+class PbSeccionImgTabla extends Component {
 
-    public $rows;
     public array $tituloRowClasses;
     public int $col1offset = 1;
     public string $imgSrc = '';
@@ -29,6 +29,7 @@ class SeccionImgTabla extends Component {
             public string|null $img = "camera-rotate-solid.svg",
             public string|null $clasestabla = "table table-hover table-striped",
             public bool|null $imgderecha = false,
+            public Collection|null $rows = null
     ) {
         $this->col1offset = (int) ($col1 + $col2 == 12) ? 0 : floor((12 - $col1 - $col2) / 2);
 
@@ -42,14 +43,12 @@ class SeccionImgTabla extends Component {
         $this->imgSrc = asset('images/' . $img);
         
         $this->locale = app()->getLocale();
-
-        $this->rows = \App\Models\EspecificacionesDeProductos::with(['parametros'])->where('id_producto',1)->get();
     }
 
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string {
-        return view('components.page-builder.seccion-img-tabla');
+        return view('lbh::components.pb-seccion-img-tabla');
     }
 }

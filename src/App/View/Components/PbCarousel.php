@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components\PageBuilder;
+namespace Jcrodsolutions\LaravelBladeHelpers\App\View\Components;
 
 use App\Models\Carousel as CarouselModel;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Carousel extends Component
+class PbCarousel extends Component
 {
     public $carousel;
     public string $idCarousel;
@@ -23,6 +23,6 @@ class Carousel extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.page-builder.carousel');
+        return view('lbh::components.pb-carousel');
     }
 }

@@ -37,7 +37,7 @@ return [
         ],
 //        'moment' => [ 'src' => 'moment-2.29.4.min.js' ],
     ],
-    'imgpath' => 'img/',
+    'imgpath' => 'images/',
     'img' => [
         'logo' => [
             'src' => env('APP_LOGO'),

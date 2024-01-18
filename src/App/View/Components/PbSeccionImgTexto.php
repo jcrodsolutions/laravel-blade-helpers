@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\PageBuilder;
+namespace Jcrodsolutions\LaravelBladeHelpers\App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class SeccionImgTexto extends Component {
+class PbSeccionImgTexto extends Component {
 
     public array $tituloRowClasses;
     public int $col1offset = 1;
@@ -40,6 +40,6 @@ class SeccionImgTexto extends Component {
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string {
-        return view('components.page-builder.seccion-img-texto');
+        return view('lbh::components.pb-seccion-img-texto');
     }
 }

@@ -1,5 +1,5 @@
 @if($titulo)
-<x-page-builder.titulo-row :tituloRowClasses="$tituloRowClasses" :texto="$texto" :titulo="$titulo" />
+<x-lbh-pb-titulo-row :tituloRowClasses="$tituloRowClasses" :texto="$texto" :titulo="$titulo" />
 @endif
 <div class="row pt-3 d-none d-md-flex align-items-center">
     @if($col1offset)
@@ -15,7 +15,7 @@
         @if($texto)
         <figure class="text-justify">
             <blockquote class="blockquote">
-                {!! Str::markdown(__('textolargo.'.$texto)) !!}
+                {!! Str::markdown($texto) !!}
             </blockquote>
         </figure>
         @endif
@@ -32,5 +32,5 @@
     @if(isset($imgsrc) && $imgsrc)
     <img src="{{ $imgSrc }}" class="rounded" style="opacity: 0.2;position:absolute;left:0;right: 0;width:100%;height: auto;"/>
     @endif
-    {!! Str::markdown(__('textolargo.'.$texto)) !!}
+    {!! Str::markdown($texto) !!}
 </div>
