@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\{
     Ig5,
+    PbCarousel,
+    PbSeccionImagenes,
+    PbSeccionImgTabla,
+    PbSeccionImgTexto,
     PbSeccionTextoBlockquote,
     PbTituloRow,
 };
@@ -31,14 +35,16 @@ class BladeHelpersServiceProvider extends ServiceProvider {
             __DIR__ . '/../config/blade-helpers.php' => config_path(path: 'blade-helpers.php'),
         ]);
 
-//        dd(__DIR__.'\\resources\\views');
         $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
         $this->loadViewComponentsAs('lbh', [
             Ig5::class,
+            PbCarousel::class,
+            PbSeccionImagenes::class,
+            PbSeccionImgTabla::class,
+            PbSeccionImgTexto::class,
             PbSeccionTextoBlockquote::class,
             PbTituloRow::class,
         ]);
-//        $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
 
         /*
          * Esto es para poder usar en blade @loadcss('bs5') por ejemplo para cargar bootstrap
