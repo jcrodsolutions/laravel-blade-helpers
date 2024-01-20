@@ -1,1 +1,1 @@
-<img src="{{ $imgSrc }}" width="{{ $width }}" @class({{ $clases }}) alt="alt" />
+<img src="{{ $imgSrc }}" width="{{ $width }}" class="{{ $classes }}" alt="{{ $alt }}" />

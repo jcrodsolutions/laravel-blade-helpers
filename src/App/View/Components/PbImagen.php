@@ -16,12 +16,14 @@ class PbImagen extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string | null $src = "camera-rotate-solid.svg",
+        public string | null $img = "camera-rotate-solid.svg",
         public string | null $width = "100%",
-        public array | null $clases = ['rounded']
+        public string | null $classes = 'rounded',
+        public string | null $alt = null
     ) {
         $this->locale = app()->getLocale();
-        $this->imgSrc = asset(config('blade-helpers.imgpath') . $src);
+        $this->imgSrc = asset(config('blade-helpers.imgpath') . $img);
+        $this->alt = $this->alt ?? $this->img;
     }
 
     /**
