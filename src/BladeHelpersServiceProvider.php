@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\{
     Ig5,
+    PbBoton,
     PbCarousel,
     PbImagen,
     PbSeccionImagenes,
@@ -39,6 +40,7 @@ class BladeHelpersServiceProvider extends ServiceProvider {
         $this->loadViewsFrom(__DIR__.'/resources/views','lbh');
         $this->loadViewComponentsAs('lbh', [
             Ig5::class,
+            PbBoton::class,
             PbCarousel::class,
             PbImagen::class,
             PbSeccionImagenes::class,

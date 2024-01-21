@@ -12,3 +12,11 @@
         {!! $tabla !!}
     </div>
 </div>
+<div class="row pt-3 d-md-none">
+    <div class="col-12">
+        <x-lbh-pb-imagen :img="$img" />
+    </div>
+    <div class="col-12 small">
+        {!! $tabla !!}
+    </div>
+</div>
