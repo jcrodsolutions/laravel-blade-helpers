@@ -1,0 +1,1 @@
+<img src="{{ $imgSrc }}" width="{{ $width }}" class="{{ $classes }}" alt="{{ $alt }}" />

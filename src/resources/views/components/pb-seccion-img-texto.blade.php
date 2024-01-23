@@ -21,7 +21,7 @@
         @endif
         @if($botontxt)
         <div class="text-center">
-            <a href="{{ $botonurl ?? '#' }}" class="btn btn-lg bg-accent2 text-capitalize">{{ $botontxt }}</a>
+            <x-lbh-pb-boton :url="$botonurl" :text="$botontxt" />
         </div>
         @endif
     </div>
@@ -32,5 +32,7 @@
     @if(isset($imgsrc) && $imgsrc)
     <img src="{{ $imgSrc }}" class="rounded" style="opacity: 0.2;position:absolute;left:0;right: 0;width:100%;height: auto;"/>
     @endif
+    @if($texto)
     {!! Str::markdown($texto) !!}
+    @endif
 </div>

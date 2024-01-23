@@ -12,7 +12,7 @@ class PbSeccionImagenes extends Component {
     /**
      * Create a new component instance.
      */
-    public function __construct(public array $imagenes) {
+    public function __construct(public array $images) {
         //
     }
 
