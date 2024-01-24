@@ -3,6 +3,7 @@
 namespace Jcrodsolutions\LaravelBladeHelpers;
 
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Jcrodsolutions\LaravelBladeHelpers\App\View\Components\{
     Ig5,
@@ -87,6 +88,10 @@ class BladeHelpersServiceProvider extends ServiceProvider {
 
             $params = isset($file['params']) ? $file['params'] : "";
             return "<img src='" . $file['src'] . "' {$params}/>";
+        });
+
+        Blade::directive('route', function (string $route){
+            return Route::has($route) ? route($route) : "#";
         });
     }
 
