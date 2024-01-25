@@ -1,5 +1,5 @@
 @if($titulo)
-<x-lbh-pb-titulo-row :tituloRowClasses="$tituloRowClasses" :texto="$texto" :titulo="$titulo" />
+<x-lbh-pb-titulo-row :tituloRowClasses="$tituloRowClasses" :titulo="$titulo" />
 @endif
 <div class="row pt-3 d-none d-md-flex align-items-center">
     @if($col1offset)
