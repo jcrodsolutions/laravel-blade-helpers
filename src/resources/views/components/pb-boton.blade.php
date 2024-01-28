@@ -1,4 +1,4 @@
-<a href="{{ $url }}" class="{{ $classes }}">
+<a href="{{ $url }}" class="{{ $classes }}"  {{ $targetBlank?"target='_blank'":''  }}>
     @if($icon)
     <span 
         @class([
