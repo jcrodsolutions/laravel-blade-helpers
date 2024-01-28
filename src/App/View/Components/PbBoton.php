@@ -21,6 +21,7 @@ class PbBoton extends Component
         public string | null $icon = null,
         public string | null $iconColor = null,
         public string | null $iconClass = null,
+        public bool | null $targetBlank = false,
         ) {
         $this->locale = app()->getLocale();
         if ($this->url == '') {
