@@ -13,8 +13,8 @@
     </div>
     <div class="col-{{ $col2 }}">
         @if($texto)
-        <figure class="text-justify">
-            <blockquote class="blockquote">
+        <figure>
+            <blockquote class="blockquote" style="text-align: justify">
                 {!! Str::markdown($texto) !!}
             </blockquote>
         </figure>
