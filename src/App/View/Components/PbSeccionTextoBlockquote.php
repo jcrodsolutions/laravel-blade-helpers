@@ -18,6 +18,7 @@ class PbSeccionTextoBlockquote extends Component {
             public string $texto,
             public string|null $titulofgcolor = 'text-white',
             public string|null $titulobgcolor = 'bg-accent3',
+            public string|null $estilosDelTexto = 'text-align:justify;',
     ) {
 
         $this->tituloRowClasses = [
