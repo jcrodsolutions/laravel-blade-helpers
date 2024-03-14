@@ -26,14 +26,14 @@ return [
     'js' => [
         'bs5' => [
             'src' => env('BS5_JS','https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js'),
-            'params' => env('BS5_JS_PARAMS ','integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"')
+            'params' => env('BS5_JS_PARAMS ','integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"')
         ],
 //        'fontawesome6' => 'fontawesome6.all.min.js',
         'fa6' => [
             'src' => env('FA6_JS',"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"),
             'params' => env('FA6_JS_PARAMS','integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"'),
         ],
-        'jquery' => [
+        'jquery3' => [
             'src' => env('JQUERY3_JS',"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"),
             'params' => env('JQUERY3_JS_PARAMS','integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"'),
         ],
