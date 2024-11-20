@@ -12,10 +12,10 @@
                         ])>
                         @if($v?->href ??false)
                         <a href="{{ $v->href }}">
-                            <img src="{{ $v->src }}" class="d-block" alt="{{ $v?->alt ?? '' }}">
+                            <img src="{{ $v->src }}" class="d-block pb-carousel-img" alt="{{ $v?->alt ?? '' }}">
                         </a>
                         @else
-                        <img src="{{ $v->src }}" class="d-block" alt="{{ $v?->alt ?? '' }}">
+                        <img src="{{ $v->src }}" class="d-block pb-carousel-img" alt="{{ $v?->alt ?? '' }}">
                         @endif
                         @if($v->titulo || $v->texto)
                         <div class="container">
